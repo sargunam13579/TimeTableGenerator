@@ -1,5 +1,7 @@
-package backend.src.main.java.com.example.timetable.model;
+package com.example.timetable.model;
 
 public class Subject {
-    
+    public String name;
+    public boolean isLab;
+    public int weekly;
 }

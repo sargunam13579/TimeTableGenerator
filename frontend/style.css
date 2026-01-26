@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+.subject {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.subject input, .subject select {
+    padding: 8px;
+}
+button {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button.generate {
+    background: #007bff;
+    color: white;
+}
+button:hover {
+    opacity: 0.9;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #999;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+.result-box {
+    margin-top: 20px;
+}
