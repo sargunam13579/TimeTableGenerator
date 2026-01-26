@@ -1,20 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Timetable Generator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Time Table Generator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <h1>📘 Timetable Generator</h1>
-    <form id="subjectForm">
-        <div id="subjects"></div>
-        <button type="button" onclick="addSubject()">➕ Add Subject</button>
-        <button type="submit" class="generate">Generate Timetable</button>
-    </form>
-    <div id="result"></div>
+
+<header>
+  <h1>Time Table Generator</h1>
+</header>
+
+<div class="main">
+
+  <!-- LEFT PANEL -->
+  <aside>
+    <h3>DEPARTMENT</h3>
+    <select id="deptSelect">
+      <option>CSE</option>
+      <option>IT</option>
+      <option>EEE</option>
+      <option>ECE</option>
+      <option>AIDS</option>
+    </select>
+  </aside>
+
+  <!-- CONTENT -->
+  <section id="content">
+
+    <!-- STEP 1 -->
+    <div id="loginBox" class="box">
+      <h2>Login</h2>
+      <input type="email" placeholder="Gmail" id="email">
+      <input type="password" placeholder="Password" id="password">
+      <button onclick="login()">Login</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div id="setupBox" class="box hidden">
+      <h2>Department & Teacher Setup</h2>
+
+      <input placeholder="Teacher Name" id="tName">
+      <input placeholder="Subject ID" id="tSub">
+      <button onclick="addTeacher()">Add Teacher</button>
+
+      <ul id="teacherList"></ul>
+
+      <button onclick="goToGenerator()">Continue</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div id="generateBox" class="box hidden">
+      <h2>Generate Timetable</h2>
+
+      <input placeholder="Subject Name">
+      <input placeholder="Teacher">
+      <input type="number" placeholder="Weekly Periods">
+
+      <select>
+        <option>No Lab</option>
+        <option>Lab</option>
+      </select>
+
+      <button>Generate</button>
+
+      <p class="note">Timetable logic will be connected later</p>
+    </div>
+
+  </section>
 </div>
-<script src="script.js"></script>
+
+<script src="app.js"></script>
 </body>
 </html>
