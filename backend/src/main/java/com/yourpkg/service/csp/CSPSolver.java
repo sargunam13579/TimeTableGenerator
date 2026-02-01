@@ -1,7 +1,8 @@
-package com.example.timetable.csp;
+package com.yourpkg.service.csp;
 
-import com.example.timetable.model.Subject;
 import java.util.*;
+
+import com.yourpkg.entity.Subject;
 
 public class CSPSolver {
 

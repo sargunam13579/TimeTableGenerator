@@ -4,10 +4,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class TestController {
+public class HealthController {
 
     @GetMapping("/api/health")
     public String health() {
-        return "Backend + DB connected successfully";
+        return "Backend is running successfully";
     }
 }

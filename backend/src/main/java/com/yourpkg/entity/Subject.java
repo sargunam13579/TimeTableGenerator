@@ -10,9 +10,13 @@ public class Subject {
     private Long id;
 
     private String code;
-    private String name;
+    public String name;
     private String type;           // THEORY / LAB
     private int hoursPerWeek;
+
+    public Integer weekly;
+
+    public boolean isLab;
 
     // getters & setters
 }

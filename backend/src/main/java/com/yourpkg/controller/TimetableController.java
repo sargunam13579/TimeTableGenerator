@@ -1,8 +1,10 @@
-package com.example.timetable.controller;
+package com.yourpkg.controller;
 
-import com.example.timetable.csp.CSPSolver;
-import com.example.timetable.model.Subject;
 import org.springframework.web.bind.annotation.*;
+
+import com.yourpkg.entity.Subject;
+import com.yourpkg.service.csp.CSPSolver;
+
 import java.util.*;
 
 @RestController
