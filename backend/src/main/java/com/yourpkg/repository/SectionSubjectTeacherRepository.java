@@ -5,4 +5,10 @@ import com.yourpkg.entity.SectionSubjectTeacher;
 
 public interface SectionSubjectTeacherRepository
         extends JpaRepository<SectionSubjectTeacher, Long> {
+                
+        boolean existsBySectionIdAndSubjectId(
+                Long sectionId,
+                Long subjectId
+        );
+
 }

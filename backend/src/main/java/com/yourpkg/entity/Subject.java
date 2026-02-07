@@ -19,4 +19,16 @@ public class Subject {
     public boolean isLab;
 
     // getters & setters
+    public Long getId() {
+        return id;
+    }
+
+    public boolean isLab() {
+        return isLab;
+    }
+
+    public int getHoursPerWeek() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getHoursPerWeek'");
+    }
 }

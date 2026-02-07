@@ -1,7 +1,5 @@
 package com.yourpkg.entity;
-
 import jakarta.persistence.*;
-
 @Entity
 @Table(
   uniqueConstraints = {
@@ -10,22 +8,41 @@ import jakarta.persistence.*;
   }
 )
 public class TimetableSlot {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String day;    // MON, TUE...
     private int period;   // 1–8
-
     @ManyToOne
-    private Section section;
-
-    @ManyToOne
+    @JoinColumn(name = "subject_id")
     private Subject subject;
-
     @ManyToOne
+    @JoinColumn(name = "teacher_id")
     private Teacher teacher;
-
-    // getters & setters
+    @ManyToOne
+    @JoinColumn(name = "section_id")
+    private Section section;
+    public Subject getSubject() {
+      return subject;
+    }
+    public void setSection(Section section2) {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'setSection'");
+    }
+    public void setSubject(Subject subject2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setSubject'");
+    }
+    public void setTeacher(Teacher teacher2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setTeacher'");
+    }
+    public void setDay(String day2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setDay'");
+    }
+    public void setPeriod(int period2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setPeriod'");
+    }
 }
