@@ -15,10 +15,18 @@ public class TeacherSubject {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "teacher_id", nullable = false)
     private Teacher teacher;
 
     @ManyToOne
+    @JoinColumn(name = "subject_id", nullable = false)
     private Subject subject;
 
-    // getters & setters
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public Subject getSubject() {
+        return subject;
+    }
 }
