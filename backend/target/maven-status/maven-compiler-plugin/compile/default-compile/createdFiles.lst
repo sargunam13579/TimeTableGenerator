@@ -4,6 +4,7 @@ com\yourpkg\controller\AuthController.class
 com\yourpkg\repository\SectionRepository.class
 com\yourpkg\controller\SectionSubjectTeacherController.class
 com\yourpkg\controller\CollegeController.class
+com\yourpkg\security\PasswordConfig.class
 com\yourpkg\entity\Subject.class
 com\yourpkg\repository\TeacherRepository.class
 com\yourpkg\controller\TimetableController.class
