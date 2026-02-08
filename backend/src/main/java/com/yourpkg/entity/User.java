@@ -23,24 +23,24 @@ public class User {
     private String password;
 
     public String getPassword() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getPassword'");
     }
 
     public void setPassword(String encode) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setPassword'");
     }
 
     public void setRole(String string) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setRole'");
     }
 
     public String getEmail() {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getEmail'");
     }
 
-    // getters & setters
+    public Object getUsername() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getUsername'");
+    }
+
 }
