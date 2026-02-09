@@ -11,7 +11,10 @@ import java.util.Date;
 public class JwtUtil {
 
     @Value("${jwt.secret}")
-    private String secret;
+    private String jwtSecret;
+
+    @Value("${jwt.expiration}")
+    private long jwtExpiration;
 
    private final long EXPIRATION = 1000 * 60 * 60; // 1 hour
 
@@ -20,13 +23,13 @@ public class JwtUtil {
                 .setSubject(email)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION))
-                .signWith(Keys.hmacShaKeyFor(secret.getBytes()), SignatureAlgorithm.HS256)
+                .signWith(Keys.hmacShaKeyFor(jwtSecret.getBytes()), SignatureAlgorithm.HS256)
                 .compact();
     }
 
     public String extractUsername(String token) {
         return Jwts.parser()
-                .setSigningKey(secret)
+                .setSigningKey(jwtSecret)
                 .parseClaimsJws(token)
                 .getBody()
                 .getSubject();
