@@ -1,17 +1,14 @@
 package com.yourpkg.controller;
 
-import java.util.Map;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.yourpkg.dto.LoginRequest;
 import com.yourpkg.entity.User;
 import com.yourpkg.repository.UserRepository;
 import com.yourpkg.security.JwtUtil;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -38,30 +35,29 @@ public class AuthController {
             return ResponseEntity.badRequest().body("Missing fields");
         }
 
+        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
+            return ResponseEntity.badRequest().body("Email already exists");
+        }
+
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRole("ROLE_USER");
+        user.setRole("ROLE_ADMIN");
 
         userRepository.save(user);
-
         return ResponseEntity.ok("User registered successfully");
     }
 
     // LOGIN
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody Map<String, String> request) {
+    public ResponseEntity<?> login(@RequestBody LoginRequest request) {
 
-        String email = request.get("email");
-        String password = request.get("password");
-
-        User user = userRepository.findByEmail(email)
+        User user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
-        if (!passwordEncoder.matches(password, user.getPassword())) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid password");
+        if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
+            return ResponseEntity.status(401).body("Invalid password");
         }
 
         String token = jwtUtil.generateToken(user.getEmail());
-
         return ResponseEntity.ok(Map.of("token", token));
     }
 }

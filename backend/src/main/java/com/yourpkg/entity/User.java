@@ -43,4 +43,9 @@ public class User {
         throw new UnsupportedOperationException("Unimplemented method 'getUsername'");
     }
 
+    public String getRole() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getRole'");
+    }
+
 }
