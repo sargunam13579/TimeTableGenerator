@@ -10,7 +10,7 @@ public class College {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "College name is required")
+    @NotBlank
     private String name;
 
     @ManyToOne

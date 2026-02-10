@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.*;
 import com.yourpkg.entity.College;
 import com.yourpkg.repository.CollegeRepository;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/colleges")
 @CrossOrigin
@@ -16,7 +18,7 @@ public class CollegeController {
     }
 
     @PostMapping
-    public College createCollege(@RequestBody College college) {
+    public College createCollege(@Valid @RequestBody College college) {
         return collegeRepository.save(college);
     }
 
