@@ -13,8 +13,8 @@ public class College {
     @NotBlank
     private String name;
 
-    // @ManyToOne
-    // private User user;
+    @ManyToOne
+    private User user;
 
     // getters & setters
 }
