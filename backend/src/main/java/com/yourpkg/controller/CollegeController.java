@@ -3,7 +3,6 @@ package com.yourpkg.controller;
 import org.springframework.web.bind.annotation.*;
 import com.yourpkg.entity.College;
 import com.yourpkg.repository.CollegeRepository;
-
 import jakarta.validation.Valid;
 
 @RestController
