@@ -1,8 +1,11 @@
 package com.yourpkg.dto;
 
 public class LoginRequest {
+
     private String email;
     private String password;
+
+    public LoginRequest() {}   // ⚠️ THIS IS REQUIRED
 
     public String getEmail() {
         return email;
