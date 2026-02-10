@@ -1,6 +1,7 @@
 package com.yourpkg.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class College {
@@ -9,6 +10,7 @@ public class College {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "College name is required")
     private String name;
 
     @ManyToOne

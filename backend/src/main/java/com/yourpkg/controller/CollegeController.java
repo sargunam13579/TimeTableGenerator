@@ -6,6 +6,7 @@ import com.yourpkg.repository.CollegeRepository;
 
 @RestController
 @RequestMapping("/api/colleges")
+@CrossOrigin
 public class CollegeController {
 
     private final CollegeRepository collegeRepository;
