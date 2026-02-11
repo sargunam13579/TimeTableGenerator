@@ -1,3 +1,4 @@
+C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\controller\TimetableSlotController.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\entity\TeacherSubject.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\repository\SectionSubjectTeacherRepository.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\repository\TeacherRepository.java
@@ -7,6 +8,7 @@ C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\y
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\TimetableGeneratorApplication.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\service\csp\CSPSolver.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\service\csp\TimetableConstraintChecker.java
+C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\dto\LoginRequest.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\config\SecurityConfig.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\entity\TimetableSlot.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\entity\SectionSubjectTeacher.java
@@ -19,7 +21,10 @@ C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\y
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\repository\DepartmentRepository.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\entity\Subject.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\controller\TeacherController.java
+C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\dto\RegisterRequest.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\entity\College.java
+C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\dto\SectionRequest.java
+C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\security\CustomUserDetailsService.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\entity\Teacher.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\controller\SubjectController.java
 C:\Users\pgsar\OneDrive\Documents\TimeTableGenerator\backend\src\main\java\com\yourpkg\repository\SectionRepository.java
