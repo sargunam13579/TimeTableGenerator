@@ -1,10 +1,7 @@
-import { useEffect, useState } from "react";
-import api from "./api/api";
+import CreateDatabase from "./pages/CreateDatabase";
 
-function PrivateRoute({ children }) {
-  return localStorage.getItem("token")
-    ? children
-    : window.location.href = "/login";
+function App() {
+  return <CreateDatabase />;
 }
 
 export default App;

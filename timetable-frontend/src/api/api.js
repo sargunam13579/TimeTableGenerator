@@ -1,15 +1,16 @@
-import axios from "axios";
+const BASE_URL = "https://timetable-backend-er6g.onrender.com";
 
-const api = axios.create({
-  baseURL: "http://localhost:8080",
-});
+export async function getDepartments() {
+  const res = await fetch(`${BASE_URL}/api/departments`);
+  return res.json();
+}
 
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
-
-export default api;
+export async function createDepartment(data) {
+  return fetch(`${BASE_URL}/api/departments`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+}

@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffdca8;
+}
+
+/* MAIN */
+.page-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #b9c7bf;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  background-color: #dfe3e8;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.action-btn {
+  background-color: #4a73c2;
+  color: white;
+  border: none;
+  padding: 18px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.cancel-btn,
+.save-btn,
+.primary-btn {
+  background-color: #4a73c2;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 30px;
+  width: 450px;
+  border-radius: 30px;
+  border: 2px solid orange;
+}
+
+.modal h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: rebeccapurple;
+}
+
+label{
+  border: 2px solid orange;
+}
+
+.modal-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.modal-row label {
+  width: 40%;
+  color: black;
+}
+
+.modal-row input {
+  width: 50%;
+  padding: 8px;
+  border-radius: 10px;
+  border: 2px solid orange;
+  background-color: white;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.modal-actions button {
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 2px solid orange;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* CREATE DB */
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dept-list {
+  margin-top: 40px;
+  background: #e6ece8;
+  padding: 20px;
+}
+
+.dept-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+
+/*             npm run dev
