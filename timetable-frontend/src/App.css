@@ -40,3 +40,59 @@
 .read-the-docs {
   color: #888;
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: #dfe4e1;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-box select,
+.modal-box input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-large {
+  background: #f4f4f4;
+  padding: 30px;
+  border-radius: 20px;
+  width: 600px;
+}
+
+.subject-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.added-subjects {
+  margin-top: 20px;
+  background: #ddd;
+  padding: 10px;
+}
+
+.subject-item {
+  padding: 5px;
+}

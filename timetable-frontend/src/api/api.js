@@ -14,3 +14,15 @@ export async function createDepartment(data) {
     body: JSON.stringify(data)
   });
 }
+
+export async function createSections(data) {
+  const res = await fetch("https://timetable-backend-er6g.onrender.com/api/sections/bulk", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+
+  return res.json();
+}

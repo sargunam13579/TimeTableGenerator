@@ -11,6 +11,9 @@ public class Teacher {
 
     private String name;
 
+    @ManyToOne
+    private Subject subject;
+
     @Column(unique = true)
     private String employeeCode;
 
