@@ -1,22 +1,16 @@
-import { useState } from "react";
-import api from "../api/api";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const login = async () => {
-    const res = await api.post("/api/auth/login", { email, password });
-    localStorage.setItem("token", res.data);
-    window.location.href = "/dashboard";
+  const handleLogin = () => {
+    navigate("/create-db");
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <input placeholder="Email" onChange={e => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
-      <button onClick={login}>Login</button>
+    <div className="login-container">
+      <h2>Timetable Generator</h2>
+      <button onClick={handleLogin}>Create / Edit Database</button>
     </div>
   );
 }
